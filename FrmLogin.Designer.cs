@@ -1,4 +1,4 @@
-﻿namespace Pantallas_Sistema_facturación
+﻿namespace Pantallas_Sistema_Facturación
 {
     partial class Frmlogin
     {
@@ -63,7 +63,7 @@
             // pictureBox1
             // 
             pictureBox1.Dock = DockStyle.Left;
-            pictureBox1.Image = Properties.Resources.login_logo_user_users_group_customer_education_button_typeface_credential_png_clipart_removebg_preview;
+            pictureBox1.Image = Pantallas_Sistema_facturación.Properties.Resources.login_logo_user_users_group_customer_education_button_typeface_credential_png_clipart_removebg_preview;
             pictureBox1.Location = new Point(3, 343);
             pictureBox1.Name = "pictureBox1";
             pictureBox1.Size = new Size(374, 0);
@@ -102,7 +102,7 @@
             labelLogin.TabIndex = 3;
             labelLogin.Text = "Login";
             labelLogin.TextAlign = ContentAlignment.TopCenter;
-            labelLogin.Click += label2_Click;
+       
             // 
             // linkLabel1
             // 

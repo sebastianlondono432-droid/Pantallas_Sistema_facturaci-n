@@ -1,17 +1,26 @@
-namespace Pantallas_Sistema_facturación
+using Microsoft.VisualBasic.Logging;
+using Pantallas_Sistema_Facturación;
+using System;
+using System.Windows.Forms;
+
+namespace Pantallas_Sistema_Facturación
 {
     internal static class Program
     {
-        /// <summary>
-        ///  The main entry point for the application.
-        /// </summary>
         [STAThread]
         static void Main()
         {
-            // To customize application configuration such as set high DPI settings or default font,
-            // see https://aka.ms/applicationconfiguration.
-            ApplicationConfiguration.Initialize();
-            Application.Run(new Frmlogin());
+            Application.EnableVisualStyles();
+            Application.SetCompatibleTextRenderingDefault(false);
+
+            // Mostrar login primero
+            Frmlogin login = new Frmlogin();
+
+            // Si el login se cierra con resultado correcto, abrir principal
+            if (login.ShowDialog() == DialogResult.OK)
+            {
+                Application.Run(new FrmPrincipal());
+            }
         }
     }
 }
